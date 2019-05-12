@@ -1,0 +1,29 @@
+{
+  "name": "roomba-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "bin": {
+    "roomba": "./lib/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts"
+  },
+  "author": "thomas",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^12.0.0",
+    "@types/commander": "^2.12.2",
+    "commander": "^2.20.0",
+    "inquirer": "^6.3.1",
+    "typescript": "^3.4.5"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^6.0.1",
+    "nodemon": "^1.19.0",
+    "ts-node": "^8.1.0"
+  }
+}
